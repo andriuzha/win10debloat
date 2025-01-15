@@ -33,14 +33,17 @@ Probada solo en la versión 20H2
 
 Ejecute Powershell como administrator
 
-Coloque la siguiente línea:
+Coloque la siguiente línea :
 
-'''
+``
 Set-ExecutionPolicy Unrestricted -Force
-'''
+``
 
 A continuación coloque el path completo del script, por ejemplo 
-c:\temp\win10debloat\script.ps1
 
-Espere a que termine el proceso y se reinicie el sistema.
+``
+c:\temp\win10debloat\script.ps1
+``
+
+Eso es todo, espere a que se realicen los cambios, termine el proceso y se reinicie el sistema.
 
