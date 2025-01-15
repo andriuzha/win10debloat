@@ -1,5 +1,6 @@
 # win10debloat
-Configuración para las instalaciones de Windows 10
+
+## Configuración para las instalaciones de Windows 10
 Probada solo en la versión 20H2
 
 
@@ -31,19 +32,23 @@ Probada solo en la versión 20H2
 
 ## Instrucciónes:
 
-Ejecute Powershell como administrator
+1.- Descarge este positorio
 
-Coloque la siguiente línea :
+2.- Descomprima el archivo zip 
+
+3.- Ejecute Powershell como administrator
+
+4.- Coloque la siguiente línea:
 
 ``
 Set-ExecutionPolicy Unrestricted -Force
 ``
 
-A continuación coloque el path completo del script, por ejemplo 
+5.- A continuación coloque la ruta completo del script, por ejemplo 
 
 ``
 c:\temp\win10debloat\script.ps1
 ``
 
-Eso es todo, espere a que se realicen los cambios, termine el proceso y se reinicie el sistema.
+6.- Eso es todo, espere a que se realicen los cambios, termine el proceso y se reinicie el sistema.
 
