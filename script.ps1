@@ -2,13 +2,20 @@
 ############################################################################
 # Script de optimización de Windows 10
 # Author: @andriuzha
-# Versión 1.1
+# Versión 1.2
 # 14 ene 2025
 # https://github.com/andriuzha/
 ############################################################################
 
 
-# Administrador
+# Cambiando la política de ejecución 
+Show-Message "Cambiando la política de ejecución a Irrestricta..."
+Write-Host "Cambiando la política de ejecución a Irrestricta..."
+Set-ExecutionPolicy Unrestricted -Force
+
+# Permisos
+Show-Message "Comprobado permisos de ejecución..."
+Write-Host "Comprobado permisos de ejecución..."
 If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]'Administrator')) {
     Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs
     Exit
@@ -159,6 +166,12 @@ Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\
 Show-Message "Instalando Google Chrome..."
 Write-Host "Instalando Google Chrome..."
 winget install -e Google.Chrome | Out-Host
+
+
+# Cambiando la política de ejecución 
+Show-Message "Restaurando la política de ejecución a Restricta..."
+Write-Host "Cambiando la política de ejecución a Restricta..."
+Set-ExecutionPolicy Restricted -Force
 
 # Mostrando aviso de éxito y reinicio en 10 segundos
 Show-Message "La operación se realizó con éxito. El equipo se reiniciará en 10 segundos."
