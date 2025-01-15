@@ -1,5 +1,7 @@
 # win10debloat
 Configuración para las instalaciones de Windows 10
+Probada solo en la versión 20H2
+
 
 
 ## Optimizaciones del Sistema que se realizan:
@@ -25,3 +27,20 @@ Configuración para las instalaciones de Windows 10
 **Configuración de Windows Update:** Configura Windows Update para que solo instale actualizaciones de seguridad.
 
 **Instalación de Google Chrome:** Instala el navegador Google Chrome.
+
+
+## Instrucciónes:
+
+Ejecute Powershell como administrator
+
+Coloque la siguiente línea:
+
+'''
+Set-ExecutionPolicy Unrestricted -Force
+'''
+
+A continuación coloque el path completo del script, por ejemplo 
+c:\temp\win10debloat\script.ps1
+
+Espere a que termine el proceso y se reinicie el sistema.
+
