@@ -1,7 +1,7 @@
 # win10debloat
 Configuración para las instalaciones de Windows 10
 
-##Explicación del script:
+## Explicación del script:
 
 **Essential Tweaks:** Aplica una serie de ajustes esenciales en el sistema, como deshabilitar la telemetría y tareas programadas innecesarias.
 **System Tweaks:** Deshabilita el Centro de actividades, activa el modo oscuro y ajusta los efectos visuales para mejorar el rendimiento.
