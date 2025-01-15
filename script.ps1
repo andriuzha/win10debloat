@@ -21,6 +21,11 @@ If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
     Exit
 }
 
+# Ejecutando como administrador
+Show-Message "El script se esta ejecutando con los permisos correspondientes..."
+Show-Message "El script se esta ejecutando con los permisos correspondientes..."
+Start-Sleep -Seconds 1
+
 # Función para mostrar diálogos
 function Show-Message {
     param (
@@ -28,6 +33,13 @@ function Show-Message {
     )
     [System.Windows.Forms.MessageBox]::Show($Message, "Información", [System.Windows.Forms.MessageBoxButtons]::OK, [System.Windows.Forms.MessageBoxIcon]::Information)
 }
+
+# Ejecutando como administrador
+Show-Message "El script iniciará con las tareas de optimización..."
+Show-Message "El script iniciará con las tareas de optimización..."
+
+# Pausa
+Start-Sleep -Seconds 1
 
 # Habilita Puntos de Restauración 
 Show-Message "Habilitando la creación de puntos de restauración..."
@@ -168,16 +180,23 @@ Write-Host "Instalando Google Chrome..."
 winget install -e Google.Chrome | Out-Host
 
 
-# Cambiando la política de ejecución 
+# Política de ejecución 
 Show-Message "Restaurando la política de ejecución a Restricta..."
 Write-Host "Cambiando la política de ejecución a Restricta..."
 Set-ExecutionPolicy Restricted -Force
 
 # Mostrando aviso de éxito y reinicio en 10 segundos
+Show-Message "https://github.com/andriuzha"
+Write-Host "https://github.com/andriuzha"
+
+# Pausa 
+Start-Sleep -Seconds 2
+
+# Mostrando aviso de éxito y reinicio en 10 segundos
 Show-Message "La operación se realizó con éxito. El equipo se reiniciará en 10 segundos."
 Write-Host "La operación se realizó con éxito. El equipo se reiniciará en 10 segundos."
 
-# Pausa de 10 segundos
+# Pausa
 Start-Sleep -Seconds 10
 
 # Reiniciar el sistema
